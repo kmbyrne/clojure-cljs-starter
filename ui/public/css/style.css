@@ -1,0 +1,8 @@
+
+.failed {
+  background: #d34d4d;
+}
+
+.passed {
+  background :#60d34d;
+}

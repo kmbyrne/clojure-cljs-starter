@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ccs-ui:
+    image: ccs-ui
+    ports:
+      - "80:80"
+      - "3333:3333"
+    environment:
+      - SERVER_HOST=server
+      - SERVER_PORT=8080
+    links:
+      - ccs-server
+
+  ccs-server:
+    image: ccs-server
+    ports:
+      - "8080:8080"
+      - "3001:3001"
